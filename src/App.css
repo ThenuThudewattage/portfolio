@@ -32,7 +32,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: steelblue !important;
+  background-color: black !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -197,7 +197,7 @@ span.navbar-text{
 }
 
 .navbar-text button:hover{
-  color: #121212;
+  color: #030303;
 }
 
 .navbar-text button:hover::before {
@@ -571,4 +571,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   to {
     transform: rotate(360deg);
   }
+}
+
+/*footer*/
+.footer {
+  padding: 0 0 50px 0;
+  background-image: url('./assets/img/footer-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer img {
+  width: 26%;
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #b8b8b8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
 }
