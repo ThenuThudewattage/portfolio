@@ -3,7 +3,8 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import TrackVisibility from "react-on-screen";
+//import colorSharp2 from "../assets/img/color-sharp2.png";
 
 export const Projects = () => {
   const projects = [
@@ -44,6 +45,13 @@ export const Projects = () => {
       <Container>
         <Row>
           <Col size={12}>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__slideInUp" : ""
+                  }
+                >
                   <h2>Projects</h2>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -68,8 +76,7 @@ export const Projects = () => {
                         <Nav.Link eventKey="third">Tab 3</Nav.Link>
                       </Nav.Item>
                     </Nav>
-                    <Tab.Content
-                    >
+                    <Tab.Content>
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => {
@@ -97,11 +104,12 @@ export const Projects = () => {
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
-                
+                </div>
+              )}
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="bg-img"></img>
     </section>
   );
 };

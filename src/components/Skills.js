@@ -2,9 +2,10 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from "react-bootstrap";
-import colorSharp from "../assets/img/color-sharp.png";
-import reactLogo from "../assets/img/react-logo.png";
-import nodeLogo from "../assets/img/node-logo.png";
+//import colorSharp from "../assets/img/color-sharp.png";
+import skillsOne from "../assets/img/skills-1.png";
+import skillsTwo from "../assets/img/skills-2.png";
+import skillsThree from "../assets/img/skills-3.png";
 import bootstrapLogo from "../assets/img/bootstrap-png.png";
 
 /* create several banners named people skills, and tech stacks and frameworks and tools */
@@ -47,32 +48,25 @@ export default function Skills() {
                   className="skill-sliderd"
                 >
                   <div className="item">
-                    <img src={reactLogo} alt="img" />
-                    <h5>React</h5>
+                    <img src={skillsOne} alt="img" />
+                    
                   </div>
                   <div className="item">
-                    <img src={nodeLogo} alt="img" />
-                    <h5>Node</h5>
+                    <img src={skillsTwo} alt="img" />
+                    
                   </div>
                   <div className="item">
-                    <img src={bootstrapLogo} alt="img" />
-                    <h5>Java</h5>
+                    <img src={skillsThree} alt="img" />
+                    
                   </div>
-                  <div className="item">
-                    <img src={""} alt="img" />
-                    <h5>C++</h5>
-                  </div>
-                  <div className="item">
-                    <img src={""} alt="img" />
-                    <h5>Python</h5>
-                  </div>
+                  
                 </Carousel>
               </p>
             </div>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-left" src={colorSharp} />
+    
     </section>
   );
 }
